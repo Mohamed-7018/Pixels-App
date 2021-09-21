@@ -7,81 +7,14 @@ import '../../../constants.dart';
 import '../../../widgets/blur_filter.dart';
 import '../../news/post_boxes/post_description.dart';
 
-// class ShowcaseWeatherTimeline extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Showcase(
-//       title: 'Weather Timeline',
-//       app: _WeatherTimelineApp(),
-//       description: 'Keep it up with the weather with this shining timeline.',
-//       template: SimpleTemplate(reverse: false),
-//       theme: TemplateThemeData(
-//         frameTheme: FrameThemeData(
-//           statusBarBrightness: Brightness.dark,
-//           frameColor: Colors.white.withOpacity(0.7),
-//         ),
-//         flutterLogoColor: FlutterLogoColor.white,
-//         brightness: Brightness.dark,
-//         backgroundColor: const Color(0xFFDB84B1),
-//         titleTextStyle: GoogleFonts.lato(
-//           fontSize: 60,
-//           fontWeight: FontWeight.w900,
-//           color: Colors.white.withOpacity(0.7),
-//         ),
-//         descriptionTextStyle: GoogleFonts.lato(
-//           fontSize: 24,
-//           height: 1.2,
-//           color: Colors.white.withOpacity(0.7),
-//         ),
-//         buttonTextStyle: TextStyle(
-//           color: Colors.white.withOpacity(0.7),
-//           fontWeight: FontWeight.bold,
-//           letterSpacing: 2,
-//         ),
-//         buttonIconTheme: const IconThemeData(color: Colors.white),
-//         buttonTheme: ButtonThemeData(
-//           buttonColor: const Color(0xFF9E3773),
-//           shape: RoundedRectangleBorder(
-//             borderRadius: BorderRadius.circular(50),
-//           ),
-//           padding: const EdgeInsets.all(16),
-//         ),
-//       ),
-//       links: [
-//         LinkData.github('https://github.com/JHBitencourt/timeline_tile'),
-//       ],
-//       logoLink: LinkData(
-//         icon: Image.asset(
-//           'assets/built_by_jhb_white.png',
-//           fit: BoxFit.fitHeight,
-//         ),
-//         url: 'https://github.com/JHBitencourt',
-//       ),
-//     );
-//   }
-// }
-
-// class _WeatherTimelineApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       title: 'Weather TimelineTile',
-//     //  builder: Frame.builder,
-//       home: _WeatherTimeline(),
-//     );
-//   }
-// }
-
-class WeatherTimeline extends StatefulWidget {
 
 
-
+class EventsHistory extends StatefulWidget {
   @override
-  _WeatherTimelineState createState() => _WeatherTimelineState();
+  _EventsHistoryState createState() => _EventsHistoryState();
 }
 
-class _WeatherTimelineState extends State<WeatherTimeline> with TickerProviderStateMixin {
+class _EventsHistoryState extends State<EventsHistory> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -106,13 +39,13 @@ class _WeatherTimelineState extends State<WeatherTimeline> with TickerProviderSt
               ),
               _buildTimelineTile( context,
                 indicator: const _IconIndicator(
-                  iconData: WeatherIcons.cloudy,
+                  iconData: WeatherIcons.sunset,
                   size: 20,
                 ),
-                hour: '2021',
-                weather: 'PIXERA 5.0: Neutrons',
-                temperature: 'Main Event',
-                phrase:"Nothing is indifferent, nothing is powerless in the universe; an atom might destroy everything, an atom might save everything.\n"
+                year: '2021',
+                eventName: 'PIXERA 5.0: Neutrons',
+                eventTime: 'Main Event',
+                eventDescription:"Nothing is indifferent, nothing is powerless in the universe; an atom might destroy everything, an atom might save everything.\n"
                 "Even though, this time we’re going big with our mega Event “PIXERA”."
                 "This is when and where we share every knowledge, project, feeling, photo and research with you.\n"
                 "Do not miss the opportunity to share a moment with us and to know more about our courses, workshops and news.\n"
@@ -123,52 +56,52 @@ class _WeatherTimelineState extends State<WeatherTimeline> with TickerProviderSt
                   iconData: WeatherIcons.sunset,
                   size: 20,
                 ),
-                hour: '2021',
-                weather: 'GAP',
-                temperature: 'Mini Event',
-                phrase: "What we learn and what we know, are we really using this knowledge and technical skills to its full potential?\n"
+                year: '2021',
+                eventName: 'GAP',
+                eventTime: 'Mini Event',
+                eventDescription: "What we learn and what we know, are we really using this knowledge and technical skills to its full potential?\n"
                 'May be it is hard to invest the time to think to make a solution, but it is harder to make a creative and innovative one.\n'
                 "By making this great achievement we can really close the gap!",
               ),
               _buildTimelineTile(context,
                 indicator: const _IconIndicator(
-                  iconData: WeatherIcons.night_alt_rain_mix,
+                  iconData: WeatherIcons.sunset,
                   size: 20,
                 ),
-                hour: '2020',
-                weather: 'PIXERA 4.0: To infinity & beyond',
-                temperature: 'Mega Event',
-                phrase: 'The end of a story is a begining of another one. The story starts in 2017 and it will end at infinity. Pixera, let\'s go together to the infinity and beyond' ,
+                year: '2020',
+                eventName: 'PIXERA 4.0: To infinity & beyond',
+                eventTime: 'Mega Event',
+                eventDescription: 'The end of a story is a begining of another one. The story starts in 2017 and it will end at infinity. Pixera, let\'s go together to the infinity and beyond' ,
               ),
               _buildTimelineTile(context,
                 indicator: const _IconIndicator(
-                  iconData: WeatherIcons.snowflake_cold,
+                  iconData: WeatherIcons.sunset,
                   size: 20,
                 ),
-                hour: '2020',
-                weather: 'Telegraph',
-                temperature: 'Mini Event',
-                phrase: "Let's go back and learn together to build a better future",
+                year: '2020',
+                eventName: 'Telegraph',
+                eventTime: 'Mini Event',
+                eventDescription: "Let's go back and learn together to build a better future",
               ),
               _buildTimelineTile( context,
                 indicator: const _IconIndicator(
-                  iconData: WeatherIcons.snowflake_cold,
+                  iconData: WeatherIcons.sunset,
                   size: 20,
                 ),
-                hour: '2019',
-                weather: 'PIXERA 3.0: Wall-E is back!',
-                temperature: 'Mega Event',
-                phrase: "PIXERA Courses event is back. This year we are back with our iconic friend, Wall E",
+                year: '2019',
+                eventName: 'PIXERA 3.0: Wall-E is back!',
+                eventTime: 'Mega Event',
+                eventDescription: "PIXERA Courses event is back. This year we are back with our iconic friend, Wall E",
               ),
               _buildTimelineTile( context,
                 indicator: const _IconIndicator(
-                  iconData: WeatherIcons.snowflake_cold,
+                  iconData: WeatherIcons.sunset,
                   size: 20,
                 ),
-                hour: '2019',
-                weather: 'Earth 2035',
-                temperature: 'Mini Event',
-                phrase: "The world is in ruins...\n"
+                year: '2019',
+                eventName: 'Earth 2035',
+                eventTime: 'Mini Event',
+                eventDescription: "The world is in ruins...\n"
                   'Humanity on the edge of the yard...\n'
               'Robots are starting to control the world,\n'
                   "We offer no other solution, but we develop ourselves and prepare for war.\n"
@@ -176,46 +109,46 @@ class _WeatherTimelineState extends State<WeatherTimeline> with TickerProviderSt
               ),
               _buildTimelineTile( context,
                 indicator: const _IconIndicator(
-                  iconData: WeatherIcons.snowflake_cold,
+                  iconData: WeatherIcons.sunset,
                   size: 20,
                 ),
-                hour: '2018',
-                weather: 'Pixels League',
-                temperature: 'Mini Event',
-                phrase: "Pixels Courses is back!"
+                year: '2018',
+                eventName: 'Pixels League',
+                eventTime: 'Mini Event',
+                eventDescription: "Pixels Courses is back!"
 
               ),
               _buildTimelineTile( context,
                   indicator: const _IconIndicator(
-                    iconData: WeatherIcons.snowflake_cold,
+                    iconData: WeatherIcons.sunset,
                     size: 20,
                   ),
-                  hour: '2017',
-                  weather: 'PIXERA 2.0 : Pixels Academy ',
-                  temperature: 'Mega Event',
-                  phrase: "Pixels Courses is back! jon us to be professional in your track",
+                  year: '2017',
+                  eventName: 'PIXERA 2.0 : Pixels Academy ',
+                  eventTime: 'Mega Event',
+                  eventDescription: "Pixels Courses is back! jon us to be professional in your track",
               ),
               _buildTimelineTile( context,
                 indicator: const _IconIndicator(
-                  iconData: WeatherIcons.snowflake_cold,
+                  iconData:WeatherIcons.sunset,
                   size: 20,
                 ),
-                hour: '2017',
-                weather: 'ArduMake ',
-                temperature: 'Mega Event',
-                phrase: "There are many applications and fields of engineering.. Your role is not only that you know about each field of information.. Your main role is that you remain distinguished in a particular field that you love, but because this happens, you must gather all the information about this field.\n"
+                year: '2017',
+                eventName: 'ArduMake ',
+                eventTime: 'Mega Event',
+                eventDescription: "There are many applications and fields of engineering.. Your role is not only that you know about each field of information.. Your main role is that you remain distinguished in a particular field that you love, but because this happens, you must gather all the information about this field.\n"
                   "The special person is the one who takes care of the small details and applies it to everything he learns, and most importantly, he knows how to take advantage of these small details in building his own application.\n"
               "That is why the workshops and seminars at the Ardumake camp will not only apply my work, you will know how to link simple things together to make your own project\n",
               ),
               _buildTimelineTile( context,
                 indicator: const _IconIndicator(
-                  iconData: WeatherIcons.snowflake_cold,
+                  iconData: WeatherIcons.sunset,
                   size: 20,
                 ),
-                hour: '2016',
-                weather: 'المهندسخانة',
-                temperature: 'Mega Event',
-                phrase: "Yes, the beginning is important and everything is needed..\n"
+                year: '2016',
+                eventName: 'المهندسخانة',
+                eventTime: 'Mega Event',
+                eventDescription: "Yes, the beginning is important and everything is needed..\n"
                     "And we know very well that no one can build a skyscraper without first learning how to build a precaution.\n"
                     "But the topic is not based on the beginning, and that you learn the fundmentals, and that's it"
                 "  But it is more dependent on (what are you going to do with the fundmentals you learned about)"
@@ -224,37 +157,37 @@ class _WeatherTimelineState extends State<WeatherTimeline> with TickerProviderSt
               ),
               _buildTimelineTile( context,
                 indicator: const _IconIndicator(
-                  iconData: WeatherIcons.snowflake_cold,
+                  iconData: WeatherIcons.sunset,
                   size: 20,
                 ),
-                hour: '2015',
-                weather: 'Learn to Make ',
-                temperature: 'Mega Event',
-                phrase: "(Al-Khwarizmi - Robert Noyce - Ibn al-Haytham - Steve Jobs -.....)\n"
+                year: '2015',
+                eventName: 'Learn to Make ',
+                eventTime: 'Mega Event',
+                eventDescription: "(Al-Khwarizmi - Robert Noyce - Ibn al-Haytham - Steve Jobs -.....)\n"
                     "Tmany people were able to leave their mark in the world and be the reason that we decide to walk the path of spreading knowledge so that we leave our mark too..\n"
                     "From here came the idea of ​​learn to make .. and that we are holding workshops in 4 areas to work with our hands, launch projects and run competitions among people so that we transform the way we receive"
                 "  Knowledge comes from words that we take and preserve for a tangible product that benefits people.\n",
               ),
               _buildTimelineTile( context,
                 indicator: const _IconIndicator(
-                  iconData: WeatherIcons.snowflake_cold,
+                  iconData:WeatherIcons.sunset,
                   size: 20,
                 ),
-                hour: '2014',
-                weather: 'Simply Engineering 2.0 ',
-                temperature: 'Mega Event',
-                phrase: "With Pixels Engineering is simple",
+                year: '2014',
+                eventName: 'Simply Engineering 2.0 ',
+                eventTime: 'Mega Event',
+                eventDescription: "With Pixels Engineering is simple",
 
               ),
               _buildTimelineTile( context,
                   indicator: const _IconIndicator(
-                    iconData: WeatherIcons.snowflake_cold,
+                    iconData: WeatherIcons.sunset,
                     size: 20,
                   ),
-                  hour: '2014',
-                  weather: 'Simply Engineering 2 ',
-                  temperature: 'Mini Event',
-                  phrase: "With Pixels Engineering is simple",
+                  year: '2014',
+                  eventName: 'Simply Engineering 2 ',
+                  eventTime: 'Mini Event',
+                  eventDescription: "With Pixels Engineering is simple",
                   isLast: true
               ),
             ],
@@ -266,10 +199,10 @@ class _WeatherTimelineState extends State<WeatherTimeline> with TickerProviderSt
 
   TimelineTile _buildTimelineTile( context , {
     _IconIndicator indicator,
-    String hour,
-    String weather,
-    String temperature,
-    String phrase,
+    String year,
+    String eventName,
+    String eventTime,
+    String eventDescription,
     bool isLast = false,
   }) {
     return TimelineTile(
@@ -288,7 +221,7 @@ class _WeatherTimelineState extends State<WeatherTimeline> with TickerProviderSt
         child: Container(
           alignment: const Alignment(0.0, -0.50),
           child: Text(
-            hour,
+            year,
             style: GoogleFonts.lato(
               fontSize: 18,
               color: Colors.white.withOpacity(0.6),
@@ -304,7 +237,7 @@ class _WeatherTimelineState extends State<WeatherTimeline> with TickerProviderSt
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(
-              weather,
+              eventName,
               style: GoogleFonts.lato(
                 fontSize: 18,
                 color: Colors.white.withOpacity(0.8),
@@ -313,7 +246,7 @@ class _WeatherTimelineState extends State<WeatherTimeline> with TickerProviderSt
             ),
             const SizedBox(height: 4),
             Text(
-              temperature,
+              eventTime,
               style: GoogleFonts.lato(
                 fontSize: 16,
                 color: Colors.white.withOpacity(0.8),
@@ -342,7 +275,7 @@ class _WeatherTimelineState extends State<WeatherTimeline> with TickerProviderSt
                     color: Constants.color2,
                   )
                 ),
-                child: PostDescription(description: phrase),
+                child: PostDescription(description: eventDescription),
 
               ),
             ),

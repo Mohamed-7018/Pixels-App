@@ -7,7 +7,6 @@ import 'package:pixels/widgets/blur_filter.dart';
 import 'package:pixels/widgets/dices.dart';
 import 'package:pixels/widgets/loading.dart';
 import 'package:pixels/widgets/navigation.dart';
-import 'package:pixels/widgets/rounded_snack_bar.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:vs_scrollbar/vs_scrollbar.dart';
@@ -363,8 +362,8 @@ class _CarouselCardState extends State<CarouselCard> {
                     Constants.deleteDataFromDatabase(context, name: widget.name);
                     setState(() {
                       _isDeleted = true;
+                      _isExist = false;
                     });
-                    roundedSnackBar(context,text: "Course removed from favourite with success state");
                   },
                   icon: _isDeleted
                       ? Icon(Icons.bookmark_border_outlined)
@@ -372,7 +371,6 @@ class _CarouselCardState extends State<CarouselCard> {
                   iconSize: 30,
                 )
               : IconButton(
-
                   onPressed: () {
                     // Constants.insertToDatabase(
                     //     trackName: widget.trackName,
@@ -428,11 +426,10 @@ class _CarouselCardState extends State<CarouselCard> {
                      setState(() {
                        _isExist = false;
                      });
-                     roundedSnackBar(context,text: "Course removed from favourite with success state");
                    }
                   },
                   icon: //Icon (Icons.add),
-                  _isExist ==true
+                  _isExist == true
                       ? Icon(Icons.bookmark)
                       : Icon(Icons.bookmark_border_outlined),
                   iconSize: 30,

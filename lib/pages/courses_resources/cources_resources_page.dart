@@ -190,35 +190,6 @@ _buildFavouritesPage(BuildContext context) {
   var size = MediaQuery.of(context).size;
   return Column(
     children: [
-      // Padding(
-      //   padding: const EdgeInsets.only(bottom: 15),
-      //   child: BlurFilter(
-      //     borderRadius: BorderRadius.circular(20),
-      //     sigma: 8,
-      //     child: Container(
-      //       width: size.width * 0.8,
-      //       padding: const EdgeInsets.symmetric(vertical: 16),
-      //       alignment: Alignment.center,
-      //       decoration: BoxDecoration(
-      //         border: Border.all(color: Constants.color2, width: 2.5),
-      //         borderRadius: BorderRadius.circular(20),
-      //         color: Colors.white.withOpacity(0.15),
-      //       ),
-      //       child: Text(
-      //         "Favourite Courses",
-      //         style: (size.height > 600)
-      //             ? Theme.of(context).textTheme.headline6.copyWith(
-      //                   fontWeight: FontWeight.bold,
-      //                   letterSpacing: 2,
-      //                 )
-      //             : Theme.of(context).textTheme.subtitle1.copyWith(
-      //                   fontWeight: FontWeight.bold,
-      //                   letterSpacing: 2,
-      //                 ),
-      //       ),
-      //     ),
-      //   ),
-      // ),
       Expanded(
         child: Stack(
           children: [
@@ -282,9 +253,6 @@ _buildFavouritesPage(BuildContext context) {
                           carouselController: carouselController,
                           itemCount: Constants.favourites.length,
                           itemBuilder: (context, index, n) {
-                            // if (index == 0) {
-                            //   return IgnorePointer(child: const SizedBox());
-                            // }
                             return CarouselCard(
                               trackName: Constants.favourites[index]["track"],
                               name: Constants.favourites[index]["name"],
@@ -304,32 +272,7 @@ _buildFavouritesPage(BuildContext context) {
                           ),
                         ),
             ),
-            //
-            //       Constants.favourites.length == 0 ? Container() :
-            //       CarouselSlider.builder(
-            //         carouselController: carouselController,
-            //         itemCount: Constants.favourites.length,
-            //         itemBuilder: (context, index, n) {
-            //           // if (index == 0) {
-            //           //   return IgnorePointer(child: const SizedBox());
-            //           // }
-            //             return CarouselCard(
-            //               trackName:  Constants.favourites[index]["track"],
-            //               name: Constants.favourites[index]["name"],
-            //               description:Constants.favourites[index]["des"],
-            //               logo: Constants.favourites[index]["logo"],
-            //               index:2,
-            //               scrollControllers: scrollControllers,
-            //             );
-            //
-            //         },
-            //         options: CarouselOptions(
-            //           enlargeCenterPage: true,
-            //           enlargeStrategy: CenterPageEnlargeStrategy.height,
-            //           aspectRatio: 4 / 3.9,
-            //           viewportFraction: 0.8,
-            //         ),
-            //       ),
+
           ],
         ),
       ),

@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pixels/pages/home/noor_excel_page.dart';
 import 'package:pixels/widgets/window_navigator.dart';
 
 import '../pages/courses_resources/cources_resources_page.dart';
@@ -120,26 +119,26 @@ class _ThreeMainButtonsState extends State<ThreeMainButtons>
                 ),
                 GestureDetector(
                   onTap: () {
-                    _container1controller.animateBack(0);
-                    _container3controller.animateBack(0);
-                    _container2controller
-                        .animateTo(MediaQuery.of(context).size.height*0.5)
-                        .whenComplete(() {
-                      windowNavigateToPage(context, page: NewsPage());
-
-                      _container1controller.animateTo(160);
-                      _container2controller.animateTo(180);
-                      _container3controller.animateTo(160);
-                    });
+                    // _container1controller.animateBack(0);
+                    // _container3controller.animateBack(0);
+                    // _container2controller
+                    //     .animateTo(MediaQuery.of(context).size.height*0.5)
+                    //     .whenComplete(() {
+                    //   windowNavigateToPage(context, page: NewsPage());
+                    //
+                    //   _container1controller.animateTo(160);
+                    //   _container2controller.animateTo(180);
+                    //   _container3controller.animateTo(160);
+                    // });
                   },
                   child: Container(
-                    height: _container2controller.value * 0.4,
+                    height: _container2controller.value * 0.1,
                     child: Center(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Text(
-                            'Pixels',
+                            ' ',
                             style: TextStyle(
                                 fontFamily: 'Montserrat',
                                 color: Colors.white,
@@ -147,7 +146,7 @@ class _ThreeMainButtonsState extends State<ThreeMainButtons>
                           ),
                           SizedBox(width: 10.0),
                           Text(
-                            'News',
+                            ' ',
                             style: TextStyle(
                                 fontFamily: 'Montserrat',
                                 color: Colors.white,
@@ -166,7 +165,7 @@ class _ThreeMainButtonsState extends State<ThreeMainButtons>
                     _container3controller
                         .animateTo(MediaQuery.of(context).size.height*0.5)
                         .whenComplete(() {
-                      windowNavigateToPage(context, page: NoorExcelSheetPage());
+                      windowNavigateToPage(context, page: NewsPage());
                       _container1controller.animateTo(160);
                       _container2controller.animateTo(180);
                       _container3controller.animateTo(160);
@@ -184,7 +183,7 @@ class _ThreeMainButtonsState extends State<ThreeMainButtons>
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Text(
-                            'Pixera',
+                            'Pixels',
                             style: TextStyle(
                                 fontFamily: 'Montserrat',
                                 color: Colors.white,
@@ -192,7 +191,7 @@ class _ThreeMainButtonsState extends State<ThreeMainButtons>
                           ),
                           SizedBox(width: 10.0),
                           Text(
-                            'Courses Sheet',
+                            'News',
                             style: TextStyle(
                                 fontFamily: 'Montserrat',
                                 color: Colors.white,

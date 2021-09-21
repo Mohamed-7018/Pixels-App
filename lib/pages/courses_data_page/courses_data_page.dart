@@ -29,7 +29,7 @@ class CoursesDataPage extends StatelessWidget {
             VariousDiscs(),
             Column(
               children: [
-                TracksHeader(),
+                TracksHeader(isCoursesPage: true,),
                 Expanded(child: pages[cPage.currentPage]),
               ],
             ),

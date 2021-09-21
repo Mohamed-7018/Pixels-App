@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:pixels/pages/home/feedback.dart';
 import 'package:pixels/widgets/star_widget.dart';
 
+import '../../widgets/navigation.dart';
+
 class TracksHeader extends StatelessWidget {
+  final isCoursesPage ;
+
+  const TracksHeader({Key key, this.isCoursesPage = false}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -25,7 +32,22 @@ class TracksHeader extends StatelessWidget {
             ),
             backgroundColor: Theme.of(context).primaryColor.withOpacity(0.5),
           ),
-          Hero(
+
+          isCoursesPage ?  Hero(
+              tag: 'pixelsStar',
+              transitionOnUserGestures: true,
+              // ignore: deprecated_member_use
+              child:FlatButton(
+                onPressed:  () {
+                  circularNavigate(
+                    context,
+                    page: FeedbackScreen(),
+                    offset: Offset(MediaQuery.of(context).size.width-50, 100),
+                  );
+                },
+                child: Icon (Icons.flag_outlined, size: 30,),
+              )
+          ) : Hero(
             tag: 'pixelsStar',
             transitionOnUserGestures: true,
             child: Material(

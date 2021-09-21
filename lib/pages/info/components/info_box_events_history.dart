@@ -26,7 +26,7 @@ class _InfoBoxEventsHistory extends State<InfoBoxEventsHistory> {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           InfoHeader(),
-          WeatherTimeline(),
+          EventsHistory(),
 
         ],
       ),

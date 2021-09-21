@@ -130,8 +130,9 @@ class Constants {
     await database.rawDelete(
       'DELETE FROM favourites WHERE name = ?', ["$name"]
     ).then((value) {
-      getDataFromDatabase(database);
       print ("deleted from database");
+      roundedSnackBar(context,text: "Course removed from favourite with success state\n please refresh the app");
+      getDataFromDatabase(database);
     }).catchError((error) {
       Constants.confirmCopyLink(context, title: "Error !", content: "error while deleting the course from your favourite list, If you think there is a a problem in the app please report a problem to fix it", defaultActionText: "Ok");
       print ("error while deleting ${error.toString()}");
