@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 
 
 roundedSnackBar(context, {String text}) {
@@ -7,7 +7,7 @@ roundedSnackBar(context, {String text}) {
     SnackBar(
       content: Text(
         text,
-        style: GoogleFonts.lilyScriptOne(
+        style:TextStyle(
           color: Colors.white,
         ),
 

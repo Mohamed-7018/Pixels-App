@@ -41,7 +41,9 @@ class PostsList extends StatelessWidget {
         ),
         itemBuilder: (context, index) {
           var time = (data[index].createdTime.split('T'))[0];
-          var postUrl = data[index].attachments.data[0].url;
+          var postUrl;
+          if (postUrl == null) postUrl = Constants.facebookLink;
+          else postUrl = data[index].attachments.data[0].url;
           return Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -118,7 +120,7 @@ class PostsList extends StatelessWidget {
                       ),
                       const SizedBox(height: 10),
                       //Box is here
-                      PostBox(index: index),
+                     PostBox(index: index),
                     ],
                   ),
                 ),

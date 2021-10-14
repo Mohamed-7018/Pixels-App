@@ -71,11 +71,11 @@ class _CourcesResourcesPageState extends State<CourcesResourcesPage> {
                 children: [
                   HomeHeader(),
                   Padding(
-                    padding: EdgeInsets.only(top: 10.0),
+                    padding: EdgeInsets.only(top: 2.0),
                     child: _buildMenuBar(context),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 3,
                   ),
                   Expanded(
                     flex: 2,

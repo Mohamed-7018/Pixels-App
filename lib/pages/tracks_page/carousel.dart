@@ -108,10 +108,7 @@ class _CarouselCardState extends State<CarouselCard> {
   bool _isExist = false;
 
   @override
-  Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
-    var cPage = Provider.of<BottomNavBarProvider>(context);
-    var track = Provider.of<TrackProvider>(context);
+  void initState() {
     for (var i =0 ; i<Constants.favourites.length; i++) {
       if (Constants.favourites[i]["name"] == widget.name) {
         setState(() {
@@ -120,6 +117,14 @@ class _CarouselCardState extends State<CarouselCard> {
         break;
       }
     }
+    super.initState();
+  }
+  @override
+  Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+    var cPage = Provider.of<BottomNavBarProvider>(context);
+    var track = Provider.of<TrackProvider>(context);
+
     return Stack(
       clipBehavior: Clip.none,
       alignment: Alignment.center,
@@ -332,7 +337,7 @@ class _CarouselCardState extends State<CarouselCard> {
 /*---------------------------------------  Course Logo  ---------------------------------------*/
 /*---------------------------------------------------------------------------------------------*/
         Positioned(
-          top: (size.height > 600) ? -30 : 0,
+          top: (size.height > 600) ? -22 : 0,
           left: 0,
           right: 0,
           child: CircleAvatar(
@@ -420,7 +425,8 @@ class _CarouselCardState extends State<CarouselCard> {
 
                        });
                      });
-                    } else {
+                    }
+                    if (_isExist == true) {
                    // Constants.confirmCopyLink(context, title: "Existing Course", content: "The Course is already existing in your bookmarks list,to delete it please go to the bookmarks list and delete it then refresh the app", defaultActionText: "Ok");
                      Constants.deleteDataFromDatabase(context, name: widget.name);
                      setState(() {

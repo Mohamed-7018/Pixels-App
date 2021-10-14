@@ -26,16 +26,6 @@ class _SuccessTimelineState extends State<SuccessTimeline> {
   Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height*0.65,
-      // decoration: const BoxDecoration(
-      //   gradient: LinearGradient(
-      //     begin: Alignment.topLeft,
-      //     end: Alignment.bottomRight,
-      //     colors: [
-      //       Color(0xFFFCCCA9),
-      //       Color(0xFFFFA578),
-      //     ],
-      //   ),
-      // ),
       child: Theme(
         data: Theme.of(context).copyWith(
           accentColor: const Color(0xFFFCB69F).withOpacity(0.2),
@@ -244,11 +234,10 @@ class _TimelineStepsChild extends StatelessWidget {
           Text(
             title,
             textAlign: isLeftAlign ? TextAlign.right : TextAlign.left,
-            style: GoogleFonts.acme(
-              fontSize: 22,
-              color: Colors.white,// const Color(0xFFB96320),
-              fontWeight: FontWeight.bold,
-            ),
+            style: Theme.of(context)
+                .textTheme
+                .subtitle2
+                .copyWith(fontWeight: FontWeight.bold, fontSize: 20),
           ),
           const SizedBox(height: 16),
           BlurFilter(
@@ -305,9 +294,8 @@ class _Header extends StatelessWidget {
             child: Text(
               'Pixels\'21 Successful Events',
               textAlign: TextAlign.center,
-              style: GoogleFonts.architectsDaughter(
-                fontSize: 26,
-                color: Constants.color2,
+              style: Theme.of(context).textTheme.headline5.copyWith(
+                letterSpacing: 2,
                 fontWeight: FontWeight.bold,
               ),
             ),
