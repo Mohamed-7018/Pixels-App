@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pixels/pages/news/post_boxes/post_description.dart';
 import 'package:timeline_tile/timeline_tile.dart';
-import '../../../constants.dart';
 import '../../../widgets/blur_filter.dart';
 
 class MissionAndVision extends StatefulWidget {

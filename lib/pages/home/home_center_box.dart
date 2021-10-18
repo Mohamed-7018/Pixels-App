@@ -145,6 +145,7 @@ class HeaderBox extends StatelessWidget {
             ),
           ],
           pause: const Duration(milliseconds: 2500),
+          isRepeatingAnimation: true,
         ),
       ),
     );

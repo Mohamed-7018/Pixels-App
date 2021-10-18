@@ -8,7 +8,6 @@ import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pixels/pages/home/feedback.dart';
 import 'package:pixels/widgets/action_icon.dart';
-import 'package:pixels/widgets/door_navigator.dart';
 
 import '../../constants.dart';
 import '../../widgets/blur_filter.dart';
@@ -61,11 +60,11 @@ class _PixelsMediaState extends State<PixelsMedia>
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                /*---------------------------------------------------------------------------------------*/
+ /*---------------------------------------------------------------------------------------*/
 /*------------------------------------  Pixels Logo  ------------------------------------*/
 /*---------------------------------------------------------------------------------------*/
                 InfoHeader(),
-                /*---------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
 /*------------------------------------  Pixels Star  ------------------------------------*/
 /*---------------------------------------------------------------------------------------*/
                 Hero(
@@ -266,7 +265,9 @@ _contact (BuildContext context) {
                             fontSize: 25.0),
                       ),
                       onPressed: (){
-                        doorNavigateToPage(context, page: FeedbackScreen());
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => FeedbackScreen()));
+
+//                        doorNavigateToPage(context, page: FeedbackScreen());
                       },
                     ),
                   ),
@@ -298,23 +299,6 @@ Widget _buildOptionIcons({@required BuildContext context}) {
                 onTap: () {
                   Constants.launchUniversalLink (Constants.githubLink);
                 } ,
-
-               //---------------------Message function ---------------/
-                // async {
-                //   // Android
-                //   const uri = 'sms:+39 348 060 888?body=hello%20there';
-                //   if (await canLaunch(uri)) {
-                //     await launch(uri);
-                //   } else {
-                //     // iOS
-                //     const uri = 'sms:0039-222-060-888?body=hello%20there';
-                //     if (await canLaunch(uri)) {
-                //       await launch(uri);
-                //     } else {
-                //       throw 'Could not launch $uri';
-                //     }
-                //   }
-                // },
                 title: "github",
                 iconData: FeatherIcons.github,
                 color: Color(0xFF9599B3),

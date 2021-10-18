@@ -1,4 +1,3 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -13,10 +12,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../constants.dart';
 import '../../widgets/blur_filter.dart';
 import '../tracks_page/carousel.dart';
-
-// var scrollControllers ;
-// // List.generate(Constants.favourites.length, (index) => ScrollController());
-
 class CourcesResourcesPage extends StatefulWidget {
   static const String routeName = 'courcesResourcesPage';
 
@@ -140,7 +135,7 @@ class _CourcesResourcesPageState extends State<CourcesResourcesPage> {
               child: FlatButton(
                 splashColor: Colors.transparent,
                 highlightColor: Colors.transparent,
-                onPressed: _onSignInButtonPress,
+                onPressed: _onAllCoursesPage,
                 child: Text(
                   "All Courses",
                   style: TextStyle(
@@ -156,7 +151,7 @@ class _CourcesResourcesPageState extends State<CourcesResourcesPage> {
               child: FlatButton(
                 splashColor: Colors.transparent,
                 highlightColor: Colors.transparent,
-                onPressed: _onSignUpButtonPress,
+                onPressed: _onBookmarksPage,
                 child: Text(
                   "Bookmarks",
                   style: TextStyle(
@@ -172,12 +167,12 @@ class _CourcesResourcesPageState extends State<CourcesResourcesPage> {
     );
   }
 
-  void _onSignInButtonPress() {
+  void _onAllCoursesPage() {
     _pageController.animateToPage(0,
         duration: Duration(milliseconds: 500), curve: Curves.decelerate);
   }
 
-  void _onSignUpButtonPress() {
+  void _onBookmarksPage() {
     _pageController?.animateToPage(1,
         duration: Duration(milliseconds: 500), curve: Curves.decelerate);
   }
@@ -212,25 +207,19 @@ _buildFavouritesPage(BuildContext context) {
                               color: Colors.white.withOpacity(0.15),
                               shape: BoxShape.circle,
                             ),
-                            child: AnimatedTextKit(
-                              isRepeatingAnimation: false,
-                              animatedTexts: [
-                                TypewriterAnimatedText(
-                                  "Here you will find all of your favourite courses\n Hurry up and add courses to your favourite",
-                                  textAlign: TextAlign.center,
-                                  textStyle: Theme.of(context)
-                                      .textTheme
-                                      .headline6
-                                      .copyWith(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                        letterSpacing: 2,
-                                        height: 2,
-                                      ),
-                                  speed: const Duration(milliseconds: 200),
-                                ),
-                              ],
-                            ),
+                            child: Text (
+                              "Here you will find all of your favourite courses\n Hurry up and add courses to your favourite",
+                              textAlign: TextAlign.center,
+                              style:  Theme.of(context)
+                                  .textTheme
+                                  .headline6
+                                  .copyWith(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                letterSpacing: 2,
+                                height: 2,
+                              ),
+                            )
                           ),
                         ),
                       ),

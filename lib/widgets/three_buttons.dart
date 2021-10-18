@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pixels/widgets/window_navigator.dart';
 
 import '../pages/courses_resources/cources_resources_page.dart';
-import '../pages/news/news_page.dart';
 
 
 class ThreeMainButtons extends StatefulWidget {
@@ -74,16 +72,7 @@ class _ThreeMainButtonsState extends State<ThreeMainButtons>
               children: <Widget>[
                 GestureDetector(
                   onTap: () {
-                    _container2controller.animateBack(0);
-                    _container3controller.animateBack(0);
-                    _container1controller
-                        .animateTo(MediaQuery.of(context).size.height*0.5)
-                        .whenComplete(() {
-                      windowNavigateToPage(context, page: CourcesResourcesPage());
-                      _container1controller.animateTo(160);
-                      _container2controller.animateTo(180);
-                      _container3controller.animateTo(160);
-                    });
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => CourcesResourcesPage()));
                   },
                   child: Container(
                     height: _container1controller.value * 0.4,
@@ -116,60 +105,12 @@ class _ThreeMainButtonsState extends State<ThreeMainButtons>
                       ),
                     ),
                   ),
+                ),SizedBox(
+                  height:  _container2controller.value * 0.1,
                 ),
                 GestureDetector(
                   onTap: () {
-                    // _container1controller.animateBack(0);
-                    // _container3controller.animateBack(0);
-                    // _container2controller
-                    //     .animateTo(MediaQuery.of(context).size.height*0.5)
-                    //     .whenComplete(() {
-                    //   windowNavigateToPage(context, page: NewsPage());
-                    //
-                    //   _container1controller.animateTo(160);
-                    //   _container2controller.animateTo(180);
-                    //   _container3controller.animateTo(160);
-                    // });
-                  },
-                  child: Container(
-                    height: _container2controller.value * 0.1,
-                    child: Center(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text(
-                            ' ',
-                            style: TextStyle(
-                                fontFamily: 'Montserrat',
-                                color: Colors.white,
-                                fontSize: 25.0),
-                          ),
-                          SizedBox(width: 10.0),
-                          Text(
-                            ' ',
-                            style: TextStyle(
-                                fontFamily: 'Montserrat',
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 25.0),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {
-                    _container1controller.animateBack(0);
-                    _container2controller.animateBack(0);
-                    _container3controller
-                        .animateTo(MediaQuery.of(context).size.height*0.5)
-                        .whenComplete(() {
-                      windowNavigateToPage(context, page: NewsPage());
-                      _container1controller.animateTo(160);
-                      _container2controller.animateTo(180);
-                      _container3controller.animateTo(160);
-                    });
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => CourcesResourcesPage()));
                   },
                   child: Container(
                     height: _container3controller.value * 0.4,

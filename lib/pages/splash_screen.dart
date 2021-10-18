@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pixels/pages/home/home.dart';
@@ -51,19 +50,13 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
             const SizedBox(height: 30),
-            AnimatedTextKit(
-              isRepeatingAnimation: false,
-              animatedTexts: [
-                TypewriterAnimatedText(
-                  'Pixels Egypt',
-                  textStyle: Theme.of(context).textTheme.headline5.copyWith(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 2,
-                      ),
-                  speed: const Duration(milliseconds: 200),
-                ),
-              ],
+            Text (
+              'Pixels Egypt',
+              style: Theme.of(context).textTheme.headline5.copyWith(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 2,
+              ),
             ),
           ],
         ),

@@ -119,11 +119,7 @@ class _HintCircleState extends State<HintCircle>
               turns: animation,
               alignment: Alignment.center,
               child: Container(
-                child: Hero(
-                  tag: 'pixelsAbout',
-                  transitionOnUserGestures: true,
-                  child: Image.asset('assets/pixels_white.png'),
-                ),
+                child: Image.asset('assets/pixels_white.png'),
                 padding: const EdgeInsets.all(5.0),
                 width: 60,
                 height: 60,

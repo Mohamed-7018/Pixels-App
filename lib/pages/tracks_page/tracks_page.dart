@@ -1,5 +1,4 @@
 import 'dart:ui';
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:pixels/constants.dart';
@@ -80,25 +79,19 @@ class _TrackPageState extends State<TrackPage> {
                                 color: Colors.white.withOpacity(0.15),
                                 shape: BoxShape.circle,
                               ),
-                              child: AnimatedTextKit(
-                                isRepeatingAnimation: false,
-                                animatedTexts: [
-                                  TypewriterAnimatedText(
-                                    Constants
-                                        .tracksDiscription[track.trackType],
-                                    textAlign: TextAlign.center,
-                                    textStyle: Theme.of(context)
-                                        .textTheme
-                                        .headline6
-                                        .copyWith(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold,
-                                          letterSpacing: 2,
-                                          height: 2,
-                                        ),
-                                    speed: const Duration(milliseconds: 200),
-                                  ),
-                                ],
+                              child: Text (
+                                Constants
+                                    .tracksDiscription[track.trackType],
+                                textAlign: TextAlign.center,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .headline6
+                                    .copyWith(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 2,
+                                  height: 2,
+                                ),
                               ),
                             ),
                           ),
