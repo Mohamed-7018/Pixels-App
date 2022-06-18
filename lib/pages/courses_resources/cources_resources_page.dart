@@ -215,9 +215,9 @@ _buildFavouritesPage(BuildContext context) {
                                   .headline6
                                   .copyWith(
                                 color: Colors.white,
-                                fontWeight: FontWeight.bold,
+                                fontWeight: FontWeight.normal,
                                 letterSpacing: 2,
-                                height: 2,
+                                height: 1.5,
                               ),
                             )
                           ),

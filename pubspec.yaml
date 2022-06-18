@@ -31,6 +31,11 @@ dependencies:
   timeline_tile: ^1.0.0
   weather_icons: ^2.0.1
 
+
+dependency_overrides:
+  platform: ^3.1.0
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

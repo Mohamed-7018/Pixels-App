@@ -24,7 +24,7 @@ class StarWidget extends StatelessWidget {
           ),
         ),
         Text(
-          '21',
+          '22',
           style: TextStyle(
             color: Theme.of(context).primaryColor,
             fontWeight: FontWeight.w900,

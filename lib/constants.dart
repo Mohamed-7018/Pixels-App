@@ -5,6 +5,7 @@ import 'package:sqflite/sqflite.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Constants {
+  static String faceBookGraphAPI ;
   static const List tracksNames = [
     'CS & Comms Track',
     'Power Track',
@@ -17,8 +18,8 @@ class Constants {
     'Mechanical Track\nMechanical Engineering Track',
   ];
 
-  static const String facebookUrl =
-      'https://graph.facebook.com/PixelsEgyptOrg?fields=about,posts{created_time,full_picture,message,message_tags,attachments{media_type,url,description,subattachments,media,title,type}}&access_token=EAAFZCTUhVuBYBAO2Fkhe8mxYzWMpZBM1xkVGJjKbhq8yAB7CUgJem50VOXrEZAvysJPPrGiankaXqoJPRlyUNPeyoMsvlWnlNQ6PWXm7jLaBqw7JEMzKLEFZAZA2BwdVzww1w90f5NgTD5knd5ZCZBciQiAO8NEAnvH3oMgU1jQpwZDZD';
+  static  String facebookUrl =
+      'https://graph.facebook.com/PixelsEgyptOrg?fields=about,posts{created_time,full_picture,message,message_tags,attachments{media_type,url,description,subattachments,media,title,type}}&access_token=$faceBookGraphAPI';
 
   static const String csTrackUrl =
       'https://script.google.com/macros/s/AKfycbylNc7htZoK5dAJN46e-yxfJD7YnYYmvo2xAdglcQv-YnDtGCH-TG-OGeC4Gx9twLHE/exec';

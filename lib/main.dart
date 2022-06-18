@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:pixels/constants.dart';
+import 'package:pixels/models/facebook_access_token.dart';
 import 'package:pixels/pages/courses_data_page/courses_data_page.dart';
 import 'package:pixels/pages/courses_resources/cources_resources_page.dart';
 import 'backend/face_posts_data.dart';
@@ -53,12 +54,41 @@ class _MyAppState extends State<MyApp> {
     }
   }
 
+  Future<String> goTeamsFromSheet() async {
+    var raw = await http.get(
+        Uri.parse ("https://script.google.com/macros/s/AKfycbwPsFAiXtOtZXmf1Ec90KqafAYfRPVMrtFPJpd2aGyzTDwsSQdh/exec"));
+
+    var jsonSource = convert.jsonDecode(raw.body) as List;
+    // print('this is json Feedback ${jsonSource}');
+
+    print ('#############################################################################################');
+    print (jsonSource.map((json) => FaceBookGraphAPI.fromJson(json)).toList()[0].url.toString());
+    setState(() {
+      Constants.faceBookGraphAPI = jsonSource.map((json) => FaceBookGraphAPI.fromJson(json)).toList()[0].url.toString();
+    });
+    print ("&&&&&&&&&&&");
+    print (Constants.faceBookGraphAPI);
+    return jsonSource.map((json) => FaceBookGraphAPI.fromJson(json)).toList()[0].url.toString();
+    // TeamModel teamModel = new TeamModel();
+    // jsonSource.forEach((element) {
+    //   print('$element THIS IS NEXT>>>>>>>');
+    //
+    //   teamModel.ImageUrl = element['Image URL'];
+    //   teamModel.Name = element['Name'];
+    //   teamModel.Job = element['Job'];
+    //   teamModel.Linkedin = element['LinkedIn'];//source.add(sourceModel);
+    //
+    // });
+  }
+
   @override
   void initState() {
     super.initState();
     getData(Constants.csTrackUrl, 'csTrack.json');
     getData(Constants.powerTrackUrl, 'powerTrack.json');
     getData(Constants.mechanicalTrackUrl, 'mechTrack.json');
+    goTeamsFromSheet();
+
   }
 
   @override

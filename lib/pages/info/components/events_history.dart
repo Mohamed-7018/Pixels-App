@@ -38,6 +38,38 @@ class _EventsHistoryState extends State<EventsHistory> with TickerProviderStateM
                 endChild: _ContainerHeader(),
               ),
               _buildTimelineTile( context,
+                  indicator: const _IconIndicator(
+                    iconData: WeatherIcons.sunset,
+                    size: 20,
+                  ),
+                  year: '2022',
+                  eventName: 'PIXERA 6.0: Potential',
+                  eventTime: 'Main Event',
+                  eventDescription:'''
+        Nothing is indifferent, nothing is powerless in the universe; Choose your crystal, use your potential, and get your full power.
+This time we’re going big with our mega Event “PIXERA 6.0”.
+This is when and where we share every knowledge, project, feeling, photo, and research with you.
+Do not miss the opportunity to share a moment with us and to know more about our courses, workshops, and news.
+        '''
+              ),
+              _buildTimelineTile( context,
+                  indicator: const _IconIndicator(
+                    iconData: WeatherIcons.sunset,
+                    size: 20,
+                  ),
+                  year: '2022',
+                  eventName: 'RGB Pixel',
+                  eventTime: 'Mini Event',
+                  eventDescription:'''
+        كلنا طول الوقت بنبص على شاشات (موبايل، لابتوب، الخ) وسمعنا مصطلح resolution او الكاميرا دية كام ميجا بيكسل.
+في الأساس الPixel هي اصغر جزء بيكون الصوره الرقمية، فا أي صوره عشان تكمل محتاج يكون فيها Pixels كتير، و كل Pixel من دول بيتكون من 3 الوان اساسيه هي الي بتدي اللون النهائي (Red-Green-Blue) او اختصارا RGB وده اختيارنا لأسم الايفنت.
+احنا في بيكسلز شايفين ان كل شخص ممكن يكون عنده اكتر من لون و معرفه باكتر من مجال وده الي بيميز كل واحد فينا، و هنديلك الفرصة انك تعرف اكتر عن كل مجال و كل سوق عمل من خلال مجموعة الكورسات الي هنوفرهالك و تقدر تشارك معانا فيها.
+All of us spend most of our times looking at screens (phones, laptop, etc.) and are familiar with the term “resolution” or how much megapixels this camera is.
+A pixel is the smallest building unit of a digital picture, and each picture needs many pixels, each pixel itself consists of 3 main colors that give each pixel its unique color (Red-Green-Blue) or for short RGB.
+We at pixels believe that each is as unique as a different pixel with knowledge in multiple paths, and we’re giving you the opportunity to colorize your own pixel with our courses.
+        '''
+              ),
+              _buildTimelineTile( context,
                 indicator: const _IconIndicator(
                   iconData: WeatherIcons.sunset,
                   size: 20,

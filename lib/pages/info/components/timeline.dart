@@ -40,14 +40,26 @@ class _InfoTimelineState extends State<InfoTimeline> {
             cStep = value;
           });
         },
-        controlsBuilder: (context, {onStepCancel, onStepContinue}) => Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            iconBtn(icon: Icons.arrow_upward_rounded, onClick: onStepCancel),
-            iconBtn(
-                icon: Icons.arrow_downward_rounded, onClick: onStepContinue),
-          ],
-        ),
+
+        controlsBuilder: (BuildContext context, ControlsDetails controls) {
+          return Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              iconBtn(icon: Icons.arrow_upward_rounded, onClick: ()
+              {
+                setState(() {
+                  cStep > 0 ? cStep -= 1 : cStep = 0;
+                });
+              }),
+              iconBtn(
+                  icon: Icons.arrow_downward_rounded, onClick: (){
+                setState(() {
+                  cStep < 3 - 1 ? cStep += 1 : cStep = 0;
+                });
+              }),
+            ],
+          );
+        },
         steps: List.generate(
           3,
           (index) => infoStep(
