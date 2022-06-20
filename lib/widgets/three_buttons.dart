@@ -107,39 +107,39 @@ class _ThreeMainButtonsState extends State<ThreeMainButtons>
                     ),
                   ),
                 ),
-                GestureDetector(
-                  onTap: () {
-                  },
-                  child: Container(
-                    height: _container2controller.value * 0.4,
-                    child: Center(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text(
-                            'Pixels ',
-                            style: TextStyle(
-                                fontFamily: 'Montserrat',
-                                color: Colors.white,
-                                fontSize: 25.0),
-                          ),
-                          SizedBox(width: 10.0),
-                          Text(
-                            'Projects',
-                            style: TextStyle(
-                                fontFamily: 'Montserrat',
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 25.0),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                // SizedBox(
-                //   height:  _container2controller.value * 0.1,
+                // GestureDetector(
+                //   onTap: () {
+                //   },
+                //   child: Container(
+                //     height: _container2controller.value * 0.4,
+                //     child: Center(
+                //       child: Row(
+                //         mainAxisAlignment: MainAxisAlignment.center,
+                //         children: <Widget>[
+                //           Text(
+                //             'Pixels ',
+                //             style: TextStyle(
+                //                 fontFamily: 'Montserrat',
+                //                 color: Colors.white,
+                //                 fontSize: 25.0),
+                //           ),
+                //           SizedBox(width: 10.0),
+                //           Text(
+                //             'Projects',
+                //             style: TextStyle(
+                //                 fontFamily: 'Montserrat',
+                //                 color: Colors.white,
+                //                 fontWeight: FontWeight.bold,
+                //                 fontSize: 25.0),
+                //           ),
+                //         ],
+                //       ),
+                //     ),
+                //   ),
                 // ),
+                SizedBox(
+                  height:  _container2controller.value * 0.1,
+                ),
                 GestureDetector(
                   onTap: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => NewsPage()));
