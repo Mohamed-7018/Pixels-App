@@ -21,7 +21,7 @@ class HomeHeader extends StatelessWidget {
           (isHome)
               ? IconButton(
                   icon: const Icon(Icons.info_outline_rounded),
-                  iconSize: 30,
+                  iconSize: 50,
                   onPressed: () {
                     circularNavigate(
                       context,
