@@ -55,20 +55,33 @@ class _MyAppState extends State<MyApp> {
   }
 
   Future<String> goTeamsFromSheet() async {
-    var raw = await http.get(
-        Uri.parse ("https://script.google.com/macros/s/AKfycbwPsFAiXtOtZXmf1Ec90KqafAYfRPVMrtFPJpd2aGyzTDwsSQdh/exec"));
+    var raw = await http.get(Uri.parse(
+        "https://script.google.com/macros/s/AKfycbwPsFAiXtOtZXmf1Ec90KqafAYfRPVMrtFPJpd2aGyzTDwsSQdh/exec"));
 
     var jsonSource = convert.jsonDecode(raw.body) as List;
     // print('this is json Feedback ${jsonSource}');
 
-    print ('#############################################################################################');
-    print (jsonSource.map((json) => FaceBookGraphAPI.fromJson(json)).toList()[0].url.toString());
+    print(
+        '#############################################################################################');
+    print(jsonSource
+        .map((json) => FaceBookGraphAPI.fromJson(json))
+        .toList()[0]
+        .url
+        .toString());
     setState(() {
-      Constants.faceBookGraphAPI = jsonSource.map((json) => FaceBookGraphAPI.fromJson(json)).toList()[0].url.toString();
+      Constants.faceBookGraphAPI = jsonSource
+          .map((json) => FaceBookGraphAPI.fromJson(json))
+          .toList()[0]
+          .url
+          .toString();
     });
-    print ("&&&&&&&&&&&");
-    print (Constants.faceBookGraphAPI);
-    return jsonSource.map((json) => FaceBookGraphAPI.fromJson(json)).toList()[0].url.toString();
+    print("&&&&&&&&&&&");
+    print(Constants.faceBookGraphAPI);
+    return jsonSource
+        .map((json) => FaceBookGraphAPI.fromJson(json))
+        .toList()[0]
+        .url
+        .toString();
     // TeamModel teamModel = new TeamModel();
     // jsonSource.forEach((element) {
     //   print('$element THIS IS NEXT>>>>>>>');
@@ -88,7 +101,6 @@ class _MyAppState extends State<MyApp> {
     getData(Constants.powerTrackUrl, 'powerTrack.json');
     getData(Constants.mechanicalTrackUrl, 'mechTrack.json');
     goTeamsFromSheet();
-
   }
 
   @override
