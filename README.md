@@ -101,13 +101,18 @@ The app will help you to:
  <img align="left" alt="HackerRank" width="34px" src="https://user-images.githubusercontent.com/80456446/140470099-0233261b-373f-43f3-80e4-6be8ff9c9438.png"/> 
 </a>
 
+ <a href="https://pixelseg.com/">
+ <img src="https://user-images.githubusercontent.com/80456446/167701490-d85af839-f2df-41cd-9466-3b69e4ac2014.png" height="60" width="150"
+         alt="Get it on web">
+ </a>
+
 <br/>
 <!-- 
     &nbsp; [![HitCount](http://hits.dwyl.com/SatYu26/SatYu26.svg)](http://hits.dwyl.com/SatYu26/SatYu26) 
 -->
 
 
-  <br/>  <br/>
+
 <h1 align="center">
   <img src="https://user-images.githubusercontent.com/80456446/140647786-f3cc8d5e-2dc2-4ad0-8200-d36f39061763.gif" width="50" height="30"  />  Just follow☝️ and Star⭐our repository<img src="https://user-images.githubusercontent.com/80456446/140647786-f3cc8d5e-2dc2-4ad0-8200-d36f39061763.gif" width="50" height="30"  />
   </h1>
