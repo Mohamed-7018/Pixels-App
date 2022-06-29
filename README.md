@@ -16,7 +16,6 @@ The app will help you to:
   <img src="https://user-images.githubusercontent.com/80456446/140647786-f3cc8d5e-2dc2-4ad0-8200-d36f39061763.gif" width="50" height="30"  />Sharing the apps<img src="https://user-images.githubusercontent.com/80456446/140647786-f3cc8d5e-2dc2-4ad0-8200-d36f39061763.gif" width="50" height="30"  />
   </h1>
 
-  <img src="https://user-images.githubusercontent.com/80456446/140656152-1e98e92b-27ef-4140-8696-5dbda6ba6708.gif" align="left" width="270" hspace="10" vspace="10">
 
 <div display="flex">
   <table width="auto" align="center" >
